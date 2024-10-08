@@ -15,5 +15,5 @@ const login = () => {
     return;
   }
   
-  window.location.href = '../home/index.html';
+  window.location.href = '/home';
 }

@@ -36,5 +36,5 @@ const validateEmail = (email) => {
     localStorage.name = name;
     localStorage.password = hashCode(pass);
     alert("Register success.");
-    window.location.href = "../login/index.html";
+    window.location.href = "/login";
   }
