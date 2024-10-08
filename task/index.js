@@ -1,8 +1,8 @@
-let tasks = JSON.parse(localStorage.tasks);
-alert(localStorage.tasks);
-alert(task);
-if (localStorage.tasks === "") {
-  tasks = {todo:[]};
+let tasks = {
+  todo: []
+};
+if (localStorage.tasks !== undefined) {
+  tasks = JSON.parse(localStorage.tasks);
 }
 
 const refresh = () => {
@@ -11,11 +11,9 @@ const refresh = () => {
     render += `<div>${task.title}</div>`;
   });
   document.getElementById('todo').innerHTML = render;
-  alert("Success.");
 }
 
 const create = () => {
-  alert("Create.");
   let title = document.getElementById('title').value;
   let description = document.getElementById('description').value;
   let deadline = document.getElementById('deadline').value;
@@ -27,7 +25,8 @@ const create = () => {
     alert("Description can not empty.");
     return;
   }
-  if (deadline != 0) {
+  console.log(deadline);
+  if (deadline === "") {
     alert("Deadline can not empty.");
     return;
   }
