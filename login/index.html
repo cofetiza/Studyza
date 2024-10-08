@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login | Title</title>
+    <meta name="author" content="izzah">
+    <meta name="description" content="Login page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Title">
+
+    <style>
+        .button {
+          background-color:#f59dc0;
+          border-radius: 20px;
+          border: none;
+          color: #203162;
+          padding: 15px 48px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        input[type=email] {
+            width: 30%;
+            padding: 17px 30px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+
+        input[type=password] {
+            width: 30%;
+            padding: 17px 30px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 20px ;
+        }
+        </style>
+</head>
+
+<body style="width:100%;margin:0px; font-size: 30px; ">
+    <div style="width:100%;text-align:center;position:absolute; text-align:center; padding-top: 10vh;">
+        <h1 class="quicksand-login-text" style="color: lightseagreen;">Login</h1>
+        <form>
+            <div>Email</div>
+            <br>
+            <input type="email" id="email">
+            <br><br>
+            <div>Password</div>
+            <br>
+            <input type="password" id="password">
+          </form>
+        <br><br>
+        <button onclick="login()" class="button" style="margin-top: 1px;"><b>Login</b></button>
+    </div>
+    <img src="../img/background.png" style="width: 100%;">
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha512.js"></script>
+    <script src="index.js"></script>
+</body>
