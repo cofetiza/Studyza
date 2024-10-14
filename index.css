@@ -1,0 +1,44 @@
+button {
+  width: 100%;
+}
+
+.task-container {
+  width: 100%;
+  border: 1px solid black;
+  background: lightgray;
+  border-radius: 2px;
+}
+
+.card-container {
+  margin:20px;
+  padding:10px;
+  flex-grow:1;
+  border-radius:5px;
+  height: 100%;
+}
+
+.task-item {
+  padding: 5px;
+}
+
+.vertical-space {
+  height: 10px;
+}
+
+.card-title {
+  font-size: 20px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+}
+
+.input-container {
+  padding-right: 5px;
+}

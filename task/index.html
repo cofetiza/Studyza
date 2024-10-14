@@ -7,7 +7,8 @@
 	<meta name="author" content="izzah">
 	<meta name="description" content="Tasks page">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="application-name" content="Title">
+    <meta name="application-name" content="Title">
+    <link rel="stylesheet" href="/index.css">
 </head>
 
 <body style="width:100%;margin:0px">
@@ -32,22 +33,33 @@
         </a>
     </div>
 	<div style="display:flex">
-		<div style="margin:20px;padding:10px;flex-grow:1;background:cyan;border-radius:5px">
-			Create new task
-      <div>Title</div>
-      <input type="text" id="title"/>
-      <div>Description</div>
-	    <textarea id="description"></textarea>
-      <div>Deadline</div>
-	    <input type="date" id="deadline"/>
-      <button onClick="create()">Create</button>
-    </div>
-			<div style="margin:20px;padding:10px;flex-grow:1;background:red;border-radius:5px">
-        To Do List
-        <div id="todo"></div>
-      </div>
-			<div style="margin:20px;padding:10px;flex-grow:1;background:yellow;border-radius:5px">On Going</div>
-      <div style="margin:20px;padding:10px;flex-grow:1;background:lime;border-radius:5px">Done. Yay!</div>
+		<div class="card-container" style="background:cyan;">
+			<div class="card-title">Create new task</div>
+            <div class="vertical-space"></div>
+            <div>Title</div>
+            <div class="input-container"><input type="text" placeholder="Input task title here" id="title"/></div>
+            <div class="vertical-space"></div>
+            <div>Description</div>
+            <div class="input-container"><textarea placeholder="Input task description here" id="description"></textarea></div>
+            <div class="vertical-space"></div>
+            <div>Deadline</div>
+            <div class="input-container"><input type="date" id="deadline"/></div>
+            <div class="vertical-space"></div>
+            <div class="vertical-space"></div>
+            <button onClick="create()">Create</button>
+        </div>
+        <div class="card-container" style="background:red;">
+            <div class="card-title">To Do List</div>
+            <div id="todo"></div>
+        </div>
+		<div class="card-container" style="background:yellow;">
+            <div class="card-title">On Going</div>
+            <div id="ongoing"></div>
+        </div>
+        <div class="card-container" style="background:lime;">
+            <div class="card-title">Done. Yay!</div>
+            <div id="done"></div>
+        </div>
     </div>
 	</div>
   <script src="index.js"></script>
