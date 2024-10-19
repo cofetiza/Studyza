@@ -1,0 +1,55 @@
+* {
+    font-family: "Agrandir", sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("img/background.png");
+    background-size: cover;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-size: 100px;
+   background: -webkit-radial-gradient( #f59dc0,#f18cce);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    font-family: 'Quicksand', sans-serif;
+}
+#buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content:center;
+    gap: 50px;
+}
+.button {
+    padding: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 50px;
+    color: #203162;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+    border: none;
+}
+.button-login {
+    background-color: #f59dc0;
+    font-size: 15px;
+}
+.button-signup {
+    background-color: #19989c;
+    font-size: 15px;
+}

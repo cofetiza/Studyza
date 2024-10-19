@@ -8,72 +8,39 @@
 	<meta name="description" content="Landing page">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="application-name" content="Title">
-    <style>
-        .button {
-          background-color:#203162;
-          border-radius: 20px;
-          border: none;
-          color: white;
-          padding: 13px 48px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-          margin: 4px 2px;
-          cursor: pointer;
-        }
-        input[type=number] {
-            width: 100%;
-            padding: 15px 30px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border-radius: 20px;
-        }
-
-        input[type=text] {
-            width: 100%;
-            padding: 15px 30px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border-radius: 20px ;
-        }
-        </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body style="width:100%;margin:0px">
 	<body style="width:100%;margin:0px">
-        <div style="width:100%; background:#abcbd0; padding:11px;display:flex;">
-            <a href="/profile">
-                <img src="/img/profile.png" style="height:50px; margin:20px;">
-            </a>
-            <a href="/schedule">
-                <div style="margin:10px; font-family: sans-serif; font-size: 30px; color: black;">Schedule</div> 
-            </a>
-            <a href="/task">
-                <div style="margin:10px;font-family: sans-serif; font-size: 30px; color:black;">Task</div>
-            </a>
-            <a href="/exam">
-                <div style="margin:10px;font-family: sans-serif; font-size: 30px; color: black;">Exam</div>
-            </a>
-            <a href="/self study" style="margin:10px; flex-grow:1;font-family: sans-serif; font-size: 30px; color: black;">
-                <div>Self Study</div>
-            </a>
-            <a href="/home">
-                <img src="/img/home.png" style="height:50px; margin:20px"/>
-            </a>
+            <header>
+                <a href="/profile" id="profile">
+                    <img width="50px" src="/img/profile.png" alt="">
+                </a>
+                <nav style=" font-family: 'Quicksand',sans-serif; font-weight: 500; text-decoration: none;">
+                    <a href="/schedule">Schedule</a>
+                    <a href="/task">Task</a>
+                    <a href="/exam">Exam</a>
+                    <a href="/self-study">Self-Study</a>
+                </nav>
+                <a href="/home" id="home">
+                    <img width="50px" src="/img/home.png" alt="">
+                </a>
+            </header>
         </div>
 	<div style="display:flex">
 		<div style="margin:20px;padding:10px;flex-grow:1;background:#f59dc0;border-radius:5px">
-			<div style="text-align: center; font-family: sans-serif;font-size: 30px;"><b>Profile</b></div>
+			<div style="text-align: center; font-family: 'Quicksand',sans-serif;font-size: 30px;"><b>Profile</b></div>
       <br>
-			<div style="font-family: sans-serif; color: #203162;"><b>Name</b></div>
+			<div style="font-family:'Quicksand', sans-serif; color: #203162;"><b>Name</b></div>
 			<input type="text" id="name"/>
-			<div style="font-family: sans-serif; color: #203162;"><b>Grade</b></div>
+			<div style="font-family: 'Quicksand',sans-serif; color: #203162;"><b>Grade</b></div>
 			<input type="number" id="grade"/>
 			<br><br>
 			<button onclick="save()"class="button">Save</button>
+            
     </div>
-			<div style="margin:20px;padding:10px;flex-grow:1;background:#6eb4be;border-radius:5px; font-family: sans-serif;font-size: 30px;text-align: center;"><b>Statistics</b></div>
+			<div style="margin:20px;padding:10px;flex-grow:1;background:#6eb4be;border-radius:5px; font-family: 'Quicksand',sans-serif;font-size: 30px;text-align: center;"><b>Statistics</b></div>
 	</div>
     <script src="index.js"></script>
 </body>
