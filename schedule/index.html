@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/task/index.css">
     <title>Schedule</title>
 </head>
 <body style="width: 100%; margin: 0px;">
@@ -21,5 +21,50 @@
             <img width="50px" src="/img/home.png" alt="">
         </a>
     </header>
+    <div style="display:flex">
+		<div id="create" class="card-container" style="background:#f59dc0;">
+			<div class="card-title"><b>Add new class</b></div>
+            <div class="vertical-space"></div>
+            <div style="font-family:'Quicksand', sans-serif; font-weight:600;">Title</div>
+            <div class="input-container"><input type="text" placeholder="Input task title here" id="title"/></div>
+            <div class="vertical-space"></div>
+            <div style="font-family:'Quicksand', sans-serif; font-weight: 600;">Date</div>
+            <div class="input-container"><input type="date" id="date"/></div>
+            <div class="vertical-space"></div>
+            <div style="font-family:'Quicksand', sans-serif; font-weight: 600;">Begin Time</div>
+            <div class="input-container"><input type="time" id="begin"/></div>
+            <div class="vertical-space"></div>
+            <div style="font-family:'Quicksand', sans-serif; font-weight: 600;">End Time</div>
+            <div class="input-container"><input type="time" id="end"/></div>
+            <div class="vertical-space"></div>
+            <div>
+                <button class="button-create" onClick="create()">Create</button>
+            </div>
+        </div>
+		<div id="edit" class="card-container" style="background:#f59dc0;display:none">
+			<div class="card-title"><b>Edit class</b></div>
+            <div class="vertical-space"></div>
+            <div style="font-family:'Quicksand', sans-serif; font-weight:600;">Title</div>
+            <div class="input-container"><input type="text" placeholder="Input task title here" id="title-edit"/></div>
+            <div class="vertical-space"></div>
+            <div style="font-family:'Quicksand', sans-serif; font-weight: 600;">Date</div>
+            <div class="input-container"><input type="date" id="date-edit"/></div>
+            <div class="vertical-space"></div>
+            <div style="font-family:'Quicksand', sans-serif; font-weight: 600;">Begin Time</div>
+            <div class="input-container"><input type="time" id="begin-edit"/></div>
+            <div class="vertical-space"></div>
+            <div style="font-family:'Quicksand', sans-serif; font-weight: 600;">End Time</div>
+            <div class="input-container"><input type="time" id="end-edit"/></div>
+            <div class="vertical-space"></div>
+            <div>
+                <button class="button-create" onClick="save()">Save</button>
+            </div>
+        </div>
+        <div class="card-container" style="background: #b3f1fa;">
+            <div class="card-title"><b>Classes</b></div>
+            <div id="classes"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>

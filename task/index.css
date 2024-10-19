@@ -56,7 +56,7 @@ button {
   .card-container {
     margin:20px;
     padding:10px;
-    flex-grow:1;
+    width: 25%;
     border-radius:5px;
     height: 100%;
   }

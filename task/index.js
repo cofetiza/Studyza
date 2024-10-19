@@ -44,8 +44,8 @@ const refresh = () => {
         <div class="vertical-space"></div>
         <div class="task-container">
           <div class="task-item">${task.description}</div>
-          <button onClick="move('ongoing',${id},'todo')">Cancel task</button>
-          <button onClick="move('ongoing',${id},'done')">Finish</button>
+          <button class="button-cancel" onClick="move('ongoing',${id},'todo')">Cancel task</button>
+          <button class="button-do" onClick="move('ongoing',${id},'done')">Finish</button>
         </div>
       `;
     }
@@ -66,8 +66,8 @@ const refresh = () => {
         <div class="vertical-space"></div>
         <div class="task-container">
           <div class="task-item">${task.description}</div>
-          <button onClick="move('done',${id},'ongoing')">Continue</button>
-          <button onClick="move('done',${id},'none')">Remove</button>
+          <button class="button-do" onClick="move('done',${id},'ongoing')">Continue</button>
+          <button class="button-cancel" onClick="move('done',${id},'none')">Remove</button>
         </div>
       `;
     }
