@@ -22,13 +22,9 @@
         </a>
     </header>
     <div style="display:flex">
-        <div style="margin:20px;padding:10px;flex-grow:1;background-color: #f9d1df;border-radius:5px">
-            Classes<br><br>
-            Math<br>
-            09.00-11.00
-        </div>
+        <div class="card-container" style="background-color: #f9d1df; display: block" id="classes" onClick="window.location.href='/schedule'"></div>
         <div class="card-container" style="background:rgb(255, 255, 147);" id="ongoing" onClick="window.location.href='/task'"></div>
-        <div style="margin:20px;padding:10px;flex-grow:1;background:#a5f1c4ef;border-radius:5px">Exams</div>
+        <div class="card-container" style="background:#a5f1c4ef;" id="exams" onClick="window.location.href='/exam'"></div>
         </div>
     <script src="index.js"></script>
     
