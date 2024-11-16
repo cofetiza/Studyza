@@ -56,9 +56,9 @@ button {
   .card-container {
     margin:20px;
     padding:10px;
-    width: 25%;
     border-radius:5px;
     height: 100%;
+    flex-grow: 1;
   }
   
   .task-item {
@@ -173,8 +173,16 @@ nav > a:active{
     display: flex;
 }
 
-@media screen and (max-width: 700px) {
-    .row, .navbar {   
-      flex-direction: column;
+.card-panel {
+    display: flex;
+}
+
+@media (max-width: 700px) {
+    nav {   
+      display: none;
+    }
+
+    .card-panel {
+        display: inline;
     }
 }

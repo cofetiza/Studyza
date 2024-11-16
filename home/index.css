@@ -7,7 +7,7 @@ header {
     display: flex;
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     height: 80px;
     border: 1px solid #abcbd0;
     justify-content: space-around;
@@ -20,7 +20,6 @@ header {
     height: 100%;
     padding-left: 20px;
     padding-right: 20px;
-
 }
 #home {
     border: 1px solid #abcbd0;
@@ -33,35 +32,6 @@ header {
 #profile:hover, #home:hover {
     background-color: #ec7ba8;
 }
-nav {
-    align-items: center;
-    height: 100%;
-    width: 80%;
-    border: 1px solid #abcbd0;
-    display: flex;
-    justify-content: space-around;
-}
-nav > a {
-    flex-grow: 1;
-    height: 100%;
-    border: 1px solid #abcbd0;
-    display: flex;
-    font-size: 30px;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-}
-
-nav > a:hover {
-    background-color: #f59dc0;
-}
-
-nav > a:visited {
-    color: black;
-}
-
 #schedule_main {
     display: flex;
     flex-direction: row;
@@ -140,9 +110,9 @@ button {
   .card-container {
     margin:20px;
     padding:10px;
-    width: 25%;
     border-radius:5px;
     height: 100%;
+    flex-grow: 1;
   }
   
   .task-item {
@@ -184,7 +154,7 @@ header {
     display: flex;
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     height: 80px;
     border: 1px solid #abcbd0;
     justify-content: space-around;
@@ -257,8 +227,16 @@ nav > a:active{
     display: flex;
 }
 
-@media screen and (max-width: 700px) {
-    .row, .navbar {   
-      flex-direction: column;
+.card-panel {
+    display: flex;
+}
+
+@media (max-width: 700px) {
+    nav {   
+      display: none;
+    }
+
+    .card-panel {
+        display: inline;
     }
 }

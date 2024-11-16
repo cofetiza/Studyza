@@ -118,3 +118,18 @@ nav > a:visited{
       font-family: "Quicksand", sans-serif;
       font-size: 20px;
   }
+
+  
+.card-panel {
+    display: flex;
+}
+
+@media (max-width: 700px) {
+    nav {   
+      display: none;
+    }
+
+    .card-panel {
+        display: inline;
+    }
+}

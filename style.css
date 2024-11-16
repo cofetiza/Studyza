@@ -17,6 +17,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 h1 {
     font-size: 100px;
@@ -33,6 +34,7 @@ h1 {
     flex-direction: row;
     justify-content:center;
     gap: 50px;
+    flex-wrap: wrap;
 }
 .button {
     padding: 10px;
@@ -231,5 +233,15 @@ nav > a:active{
 @media screen and (max-width: 700px) {
     .row, .navbar {   
       flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+      font-size: 48px;
+    }
+
+    #buttons {
+        gap: 10px;
     }
 }

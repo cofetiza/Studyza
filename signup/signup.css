@@ -26,28 +26,12 @@
   cursor: pointer;
   font-family: 'Quicksand', sans-serif;
 }
-input[type=text] {
+input {
     width: 30%;
+    min-width: 250px;
     padding: 15px 30px;
     margin: 8px 0;
     box-sizing: border-box;
     border-radius: 20px;
-    font-family: 'Quicksand', sans-serif;
-}
-input[type=email] {
-    width: 30%;
-    padding: 15px 30px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 20px;
-    font-family: 'Quicksand', sans-serif;
-}
-
-input[type=password] {
-    width: 30%;
-    padding: 15px 30px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 20px ;
     font-family: 'Quicksand', sans-serif;
 }
