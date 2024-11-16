@@ -1,23 +1,11 @@
 let schedule = [];
 if (localStorage.schedule !== undefined) {
   schedule = JSON.parse(localStorage.schedule);
-  schedule.forEach((task,id) => {
-    // console.log(Date.parse(task.date));
-    // console.log(task.date+" "+task.begin+" +0000");
-    // console.log(Date.parse(task.date+" "+task.begin+" +0000"));
-    // console.log(Date.parse(task.date+" "+task.end+" +0000"));
-    // while (Date.parse(task.date+" "+task.end+" +0000") < Date.now()) {
-    //   task.date = new Date(Date.parse(task.date) + 604800000);
-    // }
-  });
-  console.log(Date.now());
 }
 let selectId = -1;
 
 const select = (x) => {
   selectId = x;
-  document.getElementById('create').style = 'background:#f59dc0;';
-  document.getElementById('edit').style = 'background:#f59dc0;display:none';
   refresh();
 }
 
@@ -31,7 +19,7 @@ const refresh = () => {
         <div class="task-container">
           <div class="task-item">${task.date} from ${task.begin} to ${task.end}</div>
           <button class="button-do" onClick="edit(${id})">Edit</button>
-          <button class="button-cancel" onClick="remove(${id})">Remove</button>
+           <button class="button-cancel" onClick="remove(${id})">Remove</button>
         </div>
       `;
     }
@@ -50,8 +38,6 @@ const refresh = () => {
 const remove = (id) => {
   schedule.splice(id,1);
   selectId = -1;
-  document.getElementById('create').style = 'background:#f59dc0;';
-  document.getElementById('edit').style = 'background:#f59dc0;display:none';
   refresh();
 }
 
@@ -62,17 +48,13 @@ const edit = (id) => {
   document.getElementById('date-edit').value = schedule[id].date;
   document.getElementById('begin-edit').value = schedule[id].begin;
   document.getElementById('end-edit').value = schedule[id].end;
+  selectId = -1;
   refresh();
 }
 
 const save = () => {
-  schedule[selectId].title = document.getElementById('title-edit').value;
-  schedule[selectId].date = document.getElementById('date-edit').value;
-  schedule[selectId].begin =  document.getElementById('begin-edit').value;
-  schedule[selectId].end = document.getElementById('end-edit').value;
   document.getElementById('create').style = 'background:#f59dc0;';
   document.getElementById('edit').style = 'background:#f59dc0;display:none';
-  refresh();
 }
 
 const create = () => {
@@ -81,7 +63,7 @@ const create = () => {
   let begin = document.getElementById('begin').value;
   let end = document.getElementById('end').value;
   if (title === "") {
-    alert("Subject can not empty.");
+    alert("Title can not empty.");
     return;
   }
   if (date === "") {

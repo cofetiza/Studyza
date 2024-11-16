@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" >
+    <link rel="stylesheet" href="/task/index.css">
     <title>Schedule</title>
 </head>
 <body style="width: 100%; margin: 0px;">
@@ -28,8 +25,8 @@
 		<div id="create" class="card-container" style="background:#f59dc0;">
 			<div class="card-title"><b>Add new class</b></div>
             <div class="vertical-space"></div>
-            <div style="font-family:'Quicksand', sans-serif; font-weight:600;">Subject</div>
-            <div class="input-container"><input type="text" placeholder="Input subject here" id="title"/></div>
+            <div style="font-family:'Quicksand', sans-serif; font-weight:600;">Title</div>
+            <div class="input-container"><input type="text" placeholder="Input task title here" id="title"/></div>
             <div class="vertical-space"></div>
             <div style="font-family:'Quicksand', sans-serif; font-weight: 600;">Date</div>
             <div class="input-container"><input type="date" id="date"/></div>
@@ -47,8 +44,8 @@
 		<div id="edit" class="card-container" style="background:#f59dc0;display:none">
 			<div class="card-title"><b>Edit class</b></div>
             <div class="vertical-space"></div>
-            <div style="font-family:'Quicksand', sans-serif; font-weight:600;">Subject</div>
-            <div class="input-container"><input type="text" placeholder="Input subject here" id="title-edit"/></div>
+            <div style="font-family:'Quicksand', sans-serif; font-weight:600;">Title</div>
+            <div class="input-container"><input type="text" placeholder="Input task title here" id="title-edit"/></div>
             <div class="vertical-space"></div>
             <div style="font-family:'Quicksand', sans-serif; font-weight: 600;">Date</div>
             <div class="input-container"><input type="date" id="date-edit"/></div>
@@ -63,9 +60,9 @@
                 <button class="button-create" onClick="save()">Save</button>
             </div>
         </div>
-        <div class="card-container" style="background: #b3f1fa;display:block">
+        <div class="card-container" style="background: #b3f1fa;">
             <div class="card-title"><b>Classes</b></div>
-            <div id="classes" style="display:block"></div>
+            <div id="classes"></div>
         </div>
     </div>
     <script src="index.js"></script>

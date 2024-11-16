@@ -1,102 +1,5 @@
-button {
-    width: 100%;
-  }
-
-.button-create{
-     background-color: rgb(11, 65, 123);
-     border: none;
-     font-family:"Quicksand", sans-serif;
-     border-radius: 10px;
-     color: white;
-     padding: 13px 25px;
-     text-align: center;
-     text-decoration: none;
-     display: inline-block;
-     font-size: 16px;
-     font-weight: 600;
-
-}
-
-.button-cancel{
-    background-color: rgb(241, 4, 4);
-     border: none;
-     font-family:"Quicksand", sans-serif;
-     border-radius: 2px;
-     color: white;
-     text-align: center;
-     text-decoration: none;
-     display: inline-block;
-     font-size: 12px;
-     font-weight: 600;
-
-}
-
-.button-do{
-     background-color: rgb(99, 241, 4);
-     border: none;
-     font-family:"Quicksand", sans-serif;
-     border-radius: 2px;
-     color: black;
-     text-align: center;
-     text-decoration: none;
-     display: inline-block;
-     font-size: 12px;
-     font-weight: 600;
-
-}
-  
-  .task-container {
-    width: 100%;
-    border: 1px solid black;
-    background: white;
-    border-radius: 2px;
-    font-family:"Quicksand", sans-serif;
-  }
-  
-  .card-container {
-    margin:20px;
-    padding:10px;
-    width: 25%;
-    border-radius:5px;
-    height: 100%;
-  }
-  
-  .task-item {
-    padding: 5px;
-  }
-  
-  .vertical-space {
-    height: 10px;
-  }
-  
-  .card-title {
-    font-size: 20px;
-    border-bottom: 1px solid black;
-    text-align: center;
-    font-family: "Quicksand", sans-serif;
-  }
-  
-  input {
-    width: 100%;
-    font-family: "Quicksand", sans-serif;
-  }
-  
-  textarea {
-    width: 100%;
-    font-family: "Quicksand", sans-serif;
-  }
-  
-  .input-container {
-    padding-right: 5px;
-    border-radius: 10px;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-}
 header {
-    background-color: #abcbd0;
+    background-color:  #abcbd0;
     display: flex;
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
@@ -153,10 +56,6 @@ nav > a:hover {
 
 nav > a:visited{
     color: black;
-}
-
-nav > a:active{
-    color: #f59dc0;
 }
 #schedule_main {
     display: flex;
