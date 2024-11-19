@@ -110,7 +110,7 @@ button {
   .card-container {
     margin:20px;
     padding:10px;
-    border-radius:5px;
+    border-radius:25px;
     height: 100%;
     flex-grow: 1;
   }

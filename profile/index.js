@@ -1,6 +1,71 @@
 document.getElementById('name').value = localStorage.name;
 document.getElementById('grade').value = localStorage.grade;
 
+let schedule = [];
+if (localStorage.schedule !== undefined) {
+  schedule = JSON.parse(localStorage.schedule);
+}
+let tasks = {
+  todo: [],
+  ongoing: [],
+  done: []
+};
+if (localStorage.tasks !== undefined) {
+  tasks = JSON.parse(localStorage.tasks);
+}
+let exam = [];
+if (localStorage.exam !== undefined) {
+  exam = JSON.parse(localStorage.exam);
+  for (let i = 0; i < exam.length; i++) {
+    if (Date.parse(exam[i].date+" "+exam[i].end) < Date.now()) {
+      exam.splice(i,1);
+      i--;
+    }
+  }
+}
+
+let ren = `
+  <div class="card-title"><b>Statistics</b></div>
+  <div class="vertical-space"></div>
+  <div class="input-label"><b>Class intensity:</b> `;
+
+if (schedule.length === 0) {
+  ren += `no class.`;
+}
+else if (schedule.length === 1) {
+  ren += `1 class/week.`;
+}
+else {
+  ren += `${schedule.length} classes/week.`;
+}
+
+ren += `</div>
+  <div class="vertical-space"></div>
+  <div class="input-label">
+  <b>Task count:</b>
+  <ul>
+    <li>${tasks.todo.length} to do,</li>
+    <li>${tasks.ongoing.length} ongoing,</li>
+    <li>${tasks.done.length} done.</li>
+  </ul>
+  </div>
+  <div class="input-label"><b>Exam count:</b> `;
+
+if (exam.length === 0) {
+  ren += `no upcoming exam.`;
+}
+else if (exam.length === 1) {
+  ren += `1 upcoming exam.`;
+}
+else {
+  ren += `${exam.length} upcoming exams.`;
+}
+  
+ren += `</div>
+  <div class="vertical-space"></div>`;
+
+document.getElementById('stat').innerHTML = ren;
+  
 const save = () => {
   let name = document.getElementById('name').value;
   let grade = document.getElementById('grade').value;

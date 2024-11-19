@@ -83,8 +83,8 @@ nav > a:visited{
     }
 }
 
-.button {
-    background-color:#203162;
+button {
+    background-color: rgb(11, 65, 123);
     border-radius: 20px;
     border: none;
     color: white;
@@ -93,37 +93,56 @@ nav > a:visited{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
     font-family: "Quicksand", sans-serif;
     width: 100%;
     font-weight: 500;
   }
-  input[type=number] {
-      width: 100%;
-      padding: 10px 30px;
-      margin: 8px 0;
-      box-sizing: border-box;
-      border-radius: 20px;
-      font-family: "Quicksand", sans-serif;
-      font-size: 20px;
-  }
+  
+.input-label {
+    font-family:'Quicksand', sans-serif;
+    color: #203162;
+    font-weight:600;
+}
 
-  input[type=text] {
-      width: 100%;
-      padding: 10px 30px;
-      margin: 8px 0;
-      box-sizing: border-box;
-      border-radius: 20px ;
-      font-family: "Quicksand", sans-serif;
-      font-size: 20px;
-  }
+input {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+}
 
+.vertical-space {
+    height: 10px;
+  }
+  
+.input-container {
+    padding-right: 5px;
+    border-radius: 10px;
+  }
   
 .card-panel {
     display: flex;
 }
 
+.card-container {
+    margin:20px;
+    padding:10px;
+    border-radius:25px;
+    height: 100%;
+    flex-grow: 1;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+  }
+  
 @media (max-width: 700px) {
     nav {   
       display: none;

@@ -1,5 +1,6 @@
 button {
     width: 100%;
+    border-radius: 10px;
   }
 
 .button-create{
@@ -14,14 +15,21 @@ button {
      display: inline-block;
      font-size: 16px;
      font-weight: 600;
+     border-radius: 20px;
+     cursor: pointer;
+}
 
+.input-label {
+    font-family:'Quicksand', sans-serif;
+    color: #203162;
+    font-weight:600;
 }
 
 .button-cancel{
     background-color: rgb(241, 4, 4);
      border: none;
      font-family:"Quicksand", sans-serif;
-     border-radius: 2px;
+     border-radius: 0px 0px 10px 10px;
      color: white;
      text-align: center;
      text-decoration: none;
@@ -35,7 +43,7 @@ button {
      background-color: rgb(99, 241, 4);
      border: none;
      font-family:"Quicksand", sans-serif;
-     border-radius: 2px;
+     border-radius: 0px;
      color: black;
      text-align: center;
      text-decoration: none;
@@ -49,14 +57,14 @@ button {
     width: 100%;
     border: 1px solid black;
     background: white;
-    border-radius: 2px;
+    border-radius: 10px;
     font-family:"Quicksand", sans-serif;
   }
   
   .card-container {
     margin:20px;
     padding:10px;
-    border-radius:5px;
+    border-radius:25px;
     height: 100%;
     flex-grow: 1;
   }
@@ -95,6 +103,7 @@ button {
     margin: 0;
     padding: 0;
 }
+
 header {
     background-color: #abcbd0;
     display: flex;
@@ -185,4 +194,23 @@ nav > a:active{
     .card-panel {
         display: inline;
     }
+}
+
+input {
+    padding: 5px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+}
+
+textarea {
+    padding: 5px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    resize: vertical;
 }

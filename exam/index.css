@@ -14,7 +14,14 @@ button {
      display: inline-block;
      font-size: 16px;
      font-weight: 600;
+     border-radius: 20px;
+     cursor: pointer;
+}
 
+.input-label {
+    font-family:'Quicksand', sans-serif;
+    color: #203162;
+    font-weight:600;
 }
 
 .button-cancel{
@@ -56,7 +63,7 @@ button {
   .card-container {
     margin:20px;
     padding:10px;
-    border-radius:5px;
+    border-radius:25px;
     height: 100%;
     flex-grow: 1;
   }
@@ -185,4 +192,13 @@ nav > a:active{
     .card-panel {
         display: inline;
     }
+}
+
+input {
+    padding: 5px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
 }

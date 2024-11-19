@@ -1,5 +1,109 @@
+button {
+    width: 100%;
+  }
+
+  .input-label {
+    font-family:'Quicksand', sans-serif;
+    color: #203162;
+    font-weight:600;
+}
+
+.button-create{
+     background-color: rgb(11, 65, 123);
+     border: none;
+     font-family:"Quicksand", sans-serif;
+     border-radius: 10px;
+     color: white;
+     padding: 13px 25px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     font-weight: 600;
+     border-radius: 20px;
+     cursor: pointer;
+}
+
+.button-cancel{
+    background-color: rgb(241, 4, 4);
+     border: none;
+     font-family:"Quicksand", sans-serif;
+     border-radius: 2px;
+     color: white;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 12px;
+     font-weight: 600;
+
+}
+
+.button-do{
+     background-color: rgb(99, 241, 4);
+     border: none;
+     font-family:"Quicksand", sans-serif;
+     border-radius: 2px;
+     color: black;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 12px;
+     font-weight: 600;
+
+}
+  
+  .task-container {
+    width: 100%;
+    border: 1px solid black;
+    background: white;
+    border-radius: 2px;
+    font-family:"Quicksand", sans-serif;
+  }
+  
+  .card-container {
+    margin:20px;
+    padding:10px;
+    border-radius:25px;
+    height: 100%;
+    flex-grow: 1;
+  }
+  
+  .task-item {
+    padding: 5px;
+  }
+  
+  .vertical-space {
+    height: 10px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  input {
+    width: 100%;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  textarea {
+    width: 100%;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  .input-container {
+    padding-right: 5px;
+    border-radius: 10px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+}
 header {
-    background-color:  #abcbd0;
+    background-color: #abcbd0;
     display: flex;
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
@@ -57,6 +161,10 @@ nav > a:hover {
 nav > a:visited{
     color: black;
 }
+
+nav > a:active{
+    color: #f59dc0;
+}
 #schedule_main {
     display: flex;
     flex-direction: row;
@@ -72,8 +180,25 @@ nav > a:visited{
     display: flex;
 }
 
-@media screen and (max-width: 700px) {
-    .row, .navbar {   
-      flex-direction: column;
+.card-panel {
+    display: flex;
+}
+
+@media (max-width: 700px) {
+    nav {   
+      display: none;
     }
+
+    .card-panel {
+        display: inline;
+    }
+}
+
+input {
+    padding: 5px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
 }

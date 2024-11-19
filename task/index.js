@@ -44,8 +44,8 @@ const refresh = () => {
         <div class="vertical-space"></div>
         <div class="task-container">
           <div class="task-item">${task.description}</div>
-          <button class="button-cancel" onClick="move('ongoing',${id},'todo')">Cancel task</button>
           <button class="button-do" onClick="move('ongoing',${id},'done')">Finish</button>
+          <button class="button-cancel" onClick="move('ongoing',${id},'todo')">Cancel task</button>
         </div>
       `;
     }
