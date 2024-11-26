@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Studyza</title>
-    <link rel="stylesheet" href="/home/index.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" >
+    <title>Focus Timer | Studyza</title>
 </head>
-<body>
+<body style="width: 100%; margin: 0px;">
     <header>
         <a href="/profile" id="profile">
             <img width="50px" src="/img/profile.png" alt="">
@@ -25,11 +25,22 @@
         </a>
     </header>
     <div class="card-panel">
-        <div class="card-container" style="background-color: #f9d1df;" id="classes" onClick="window.location.href='/schedule'"></div>
-        <div class="card-container" style="background:rgb(255, 255, 147);" id="ongoing" onClick="window.location.href='/task'"></div>
-        <div class="card-container" style="background:#a5f1c4ef;"id="exams" onClick="window.location.href='/exam'"></div>
+		<div id="create" class="card-container" style="background:#f59dc0;">
+			<div class="card-title"><b>Timer</b></div>
+            <div class="timer" id="timer">00:00:00</div>
+            <button class="button-create" onClick="play()" id="play">Start</button>
+            <div style="display:none" id="stop">
+                <div class="vertical-space"></div>
+                <button class="button-create" onClick="stop()">Stop</button>
+            </div>
+        </div>
+        <div class="card-container" style="background: #b3f1fa;display:block">
+            <div class="card-title"><b>Records</b></div>
+            <div class="vertical-space"></div>
+            <div id="records" style="display:block"></div>
+            <div class="vertical-space"></div>
+        </div>
     </div>
     <script src="index.js"></script>
-    
 </body>
 </html>
