@@ -210,16 +210,12 @@ input {
 
 table {
     width: 100%;
-}
-
-tr,table {
-    border: solid 1px black;
-    padding: 0px;
+    border-collapse: collapse;
 }
 
 th,td {
     border: solid 1px black;
-    margin: 0px;
+    padding: 5px;
 }
 
 th {

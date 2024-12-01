@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Studyza</title>
-    <link rel="stylesheet" href="/home/index.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" >
@@ -15,17 +15,18 @@
             <img width="50px" src="/img/profile.png" alt="">
         </a>
         <nav style=" font-family: 'Quicksand',sans-serif; font-weight: 500; text-decoration: none;">
+            <a href="/focus">Focus Timer</a>
             <a href="/schedule">Schedule</a>
             <a href="/task">Task</a>
             <a href="/exam">Exam</a>
-            <a href="/focus">Focus Timer</a>
         </nav>
         <a href="/home" id="home">
             <img width="50px" src="/img/home.png" alt="">
         </a>
     </header>
     <div class="card-panel">
-        <div class="card-container" style="background-color: #f9d1df;" id="classes" onClick="window.location.href='/schedule'"></div>
+        <div class="card-container" style="background: #b3f1fa;" id="records" onClick="window.location.href='/focus'"></div>
+        <div class="card-container" style="background: #f9d1df;" id="class" onClick="window.location.href='/schedule'"></div>
         <div class="card-container" style="background:rgb(255, 255, 147);" id="ongoing" onClick="window.location.href='/task'"></div>
         <div class="card-container" style="background:#a5f1c4ef;"id="exams" onClick="window.location.href='/exam'"></div>
     </div>

@@ -1,6 +1,10 @@
 document.getElementById('name').value = localStorage.name;
 document.getElementById('grade').value = localStorage.grade;
 
+let focus = [];
+if (localStorage.focus !== undefined) {
+  focus = JSON.parse(localStorage.focus);
+}
 let schedule = [];
 if (localStorage.schedule !== undefined) {
   schedule = JSON.parse(localStorage.schedule);
@@ -24,8 +28,28 @@ if (localStorage.exam !== undefined) {
   }
 }
 
+const digit = (x) => {
+  if (x < 10) {
+    return `0${x}`;
+  }
+  return x;
+}
+
+const durations = () => {
+  let t = 0;
+  focus.forEach(r => {
+    t += r.duration;
+  });
+  let j = digit(Math.floor(t/3600000));
+  let m = digit(Math.floor(t/60000 % 60));
+  let d = digit(Math.floor(t/1000 % 60));
+  return `${j}:${m}:${d}`;
+}
+
 let ren = `
   <div class="card-title"><b>Statistics</b></div>
+  <div class="vertical-space"></div>
+  <div class="input-label"><b>Study hours:</b> ${durations()}</div>
   <div class="vertical-space"></div>
   <div class="input-label"><b>Class intensity:</b> `;
 

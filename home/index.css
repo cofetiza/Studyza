@@ -1,60 +1,12 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-header {
-    background-color: #abcbd0;
-    display: flex;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    flex-flow: row nowrap;
-    height: 80px;
-    border: 1px solid #abcbd0;
-    justify-content: space-around;
-    align-content: center;
-}
-#profile {
-    border: 1px solid #abcbd0;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-#home {
-    border: 1px solid #abcbd0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-#profile:hover, #home:hover {
-    background-color: #ec7ba8;
-}
-#schedule_main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#subject_form {
-    display: flex;
-    flex-direction: column;
-}
-
-#classes {
-    display: flex;
-}
-
-@media screen and (max-width: 700px) {
-    .row, .navbar {   
-      flex-direction: column;
-    }
-}
 button {
     width: 100%;
   }
+
+  .input-label {
+    font-family:'Quicksand', sans-serif;
+    color: #203162;
+    font-weight:600;
+}
 
 .button-create{
      background-color: rgb(11, 65, 123);
@@ -68,7 +20,8 @@ button {
      display: inline-block;
      font-size: 16px;
      font-weight: 600;
-
+     border-radius: 20px;
+     cursor: pointer;
 }
 
 .button-cancel{
@@ -154,7 +107,7 @@ header {
     display: flex;
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     height: 80px;
     border: 1px solid #abcbd0;
     justify-content: space-around;
@@ -239,4 +192,27 @@ nav > a:active{
     .card-panel {
         display: inline;
     }
+}
+
+input {
+    padding: 5px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,td {
+    border: solid 1px black;
+    padding: 5px;
+}
+
+th {
+    background-color: rgb(255, 255, 147);
 }

@@ -1,6 +1,16 @@
+const nextWeek = (d) => {
+  let s = (new Date(Date.parse(d) + 7*24*60*60*1000)).toLocaleDateString(undefined);
+  return s;
+}
+
 let schedule = [];
 if (localStorage.schedule !== undefined) {
   schedule = JSON.parse(localStorage.schedule);
+  for (let i = 0; i < schedule.length; i++) {
+    while (Date.parse(schedule[i].date+" "+schedule[i].end) < Date.now()) {
+      schedule[i].date = nextWeek(schedule[i].date);
+    }
+  }
 }
 let selectId = -1;
 

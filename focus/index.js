@@ -4,9 +4,9 @@ if (localStorage.focus !== undefined) {
 }
 
 const record = () => {
-  let ren = `<table><tr><th>Begin</th><th>End</th><th>Duration</th></tr>`;
+  let ren = `<table><tr><th>Date</th><th>Begin</th><th>End</th><th>Duration</th></tr>`;
   focus.forEach(r => {
-    ren += `<tr><td>${display(r.begin)}</td><td>${display(r.end)}</td><td>${display(r.duration)}</td></tr>`;
+    ren += `<tr><td>${convertDate(r.begin)}</td><td>${convert(r.begin)}</td><td>${convert(r.end)}</td><td>${display(r.duration)}</td></tr>`;
   });
   ren += `</table>`;
   document.getElementById('records').innerHTML = ren;
@@ -25,8 +25,18 @@ const digit = (x) => {
   return x;
 }
 
+const convertDate = (t) => {
+  let s = new Date(t);
+  return s.toLocaleDateString("en-GB");
+}
+
+const convert = (t) => {
+  let s = new Date(t);
+  return s.toTimeString().substring(0,8);
+}
+
 const display = (t) => {
-  let j = digit(Math.floor(t/3600000 % 24));
+  let j = digit(Math.floor(t/3600000));
   let m = digit(Math.floor(t/60000 % 60));
   let d = digit(Math.floor(t/1000 % 60));
   return `${j}:${m}:${d}`;
